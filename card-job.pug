@@ -1,0 +1,19 @@
+
+-
+    const job_list = [
+        { "title": "OktetLabs", "desc": "Work descri", "link": "", "src": "" },
+        { "title": "Konfident", "desc": "Work descri", "link": "", "src": "" },
+        { "title": "Graebert",  "desc": "I'm working in cloud CAD project.", "link": "", "src": "" }
+    ]
+
+mixin job_card(title, desc, link, src)
+    .job-description
+        p.job_title= title
+        img.job_link(src=src alt="job link")
+        p.job_description= desc
+
+.card.expirience
+    h3 Work exprience
+    .job-list
+        each j in job_list
+            +job_card(j.title, j.desc, j.link, src)

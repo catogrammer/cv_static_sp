@@ -1,0 +1,23 @@
+
+-
+    const skill_list = {
+        "Major" : ["C++/C", "Golang", "UNIX API"],
+        "Minor" : ["Js/Ts", "bash/sh"],
+        "Other" : ["CMake", "Docker", "CrossBuild"],
+        "Frameworks in use" : ["Qt", "Wt", "ODA aliance", "Eigen", "OpenCV", "ReactJS"]
+    }
+
+mixin skill_card(name)
+    .skill-card
+        p= name
+
+.card.skills
+    h3 Skills
+    .skill-list
+        each value, key in skill_list
+            .skill-row
+                p= key
+                each sk in value
+                    +skill_card(sk)
+
+
