@@ -3,9 +3,10 @@ doctype html(lang='en')
 html
     head
         link(rel="stylesheet" href="main.style.css")
-    body
+    body.cv_container
         include cards/about
+        include cards/photo
         include cards/job
-        include cards/social-net
         include cards/skills
+        include cards/social-net
         script(src=`${htmlWebpackPlugin.files.main}`)
