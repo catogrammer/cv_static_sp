@@ -1,0 +1,11 @@
+doctype html(lang='en')
+
+html
+    head
+        link(rel="stylesheet" href="main.style.css")
+    body
+        include cards/about
+        include cards/job
+        include cards/social-net
+        include cards/skills
+        script(src=`${htmlWebpackPlugin.files.main}`)
