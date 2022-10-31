@@ -8,6 +8,8 @@ body {
 
     width: 900px;
     height: 700px;
+
+    background-color: #FAF7F0;
 }
 
 body::-webkit-scrollbar {
@@ -16,8 +18,15 @@ body::-webkit-scrollbar {
 
 
 .cv_container {
+    margin: 0 auto;
+    padding-top: 1.6em;
+    
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 8fr 4fr;
     column-gap: 1.5em;
     row-gap: 1.5em;
+}
+
+.card-block {
+   
 }

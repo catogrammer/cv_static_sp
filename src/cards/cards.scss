@@ -7,6 +7,14 @@
     padding: $card-base-padding;
 }
 
+.card-titile {
+    // background-color: #BCCEF8;
+    height: 2em;
+    border-radius: 1.5em;
+    text-align: center;
+    margin: auto;
+}
+
 .about {
     
 }
@@ -27,19 +35,20 @@
 .skill-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 0.5em;
 }
 
 .skill-card {
-    background-color: #f35512;
-    max-height: 3.2em;
-    border-radius: 1.6em;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
+    background-color: #BCCEF8;
+    max-height: 2.2em;
+    border-radius: 1.1em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
 }
 
 .profile {
-    background-color: white;
+    background-color: #FAF7F0;
 }
 
 .img_contrainer {
@@ -47,4 +56,16 @@
     height: 20em;
     background-color:  $card-base-color;
     border-radius: 10em;
+}
+
+.profile_img {
+    width: 18em;
+    border-radius: 9em;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.social-net-list {
+    display: flex;
+    flex-direction: row;
 }

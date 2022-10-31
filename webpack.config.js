@@ -16,6 +16,12 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
     },
 
+    resolve: {
+        alias: {
+            images: path.resolve(__dirname, "./src/imgs")
+        },
+    },
+
     module: {
         rules: [
             {
@@ -25,7 +31,19 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [ "pug-loader", ],
-            }
+            },
+            {
+                test: /\.(jp(e)?g|png|svg)$/i,
+                use : [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            esModule: false,
+                        }
+                    }
+                ]
+            },
 
         ]
     },

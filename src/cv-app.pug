@@ -3,10 +3,24 @@ doctype html(lang='en')
 html
     head
         link(rel="stylesheet" href="main.style.css")
+
     body.cv_container
-        include cards/about
+        .card-block
+            h1.card-titile Kostin Sergey
+            include cards/about
+
         include cards/photo
-        include cards/job
-        include cards/skills
-        include cards/social-net
+
+        .card-block
+            h2.card-titile Work expirience
+            include cards/job
+
+        .card-block
+            h2.card-titile Skills
+            include cards/skills
+        
+        .card-block
+            h2.card-titile Contacts
+            include cards/social-net
+
         script(src=`${htmlWebpackPlugin.files.main}`)

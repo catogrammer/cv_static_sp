@@ -13,7 +13,6 @@ mixin job_card(title, desc, link, src)
         p.job_description= desc
 
 .card.expirience
-    h3 Work exprience
     .job-list
         each j in job_list
             +job_card(j.title, j.desc, j.link, src)

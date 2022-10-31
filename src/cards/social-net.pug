@@ -1,19 +1,23 @@
 
+
 -
     const sosial_net_list = [
-        { "name": "@catogrammer", "link": "", "img": "" },
-        { "name": "@serg-k-v", "link": "https://github.com/serg-k-v", "img": "" },
-        { "name": "catogrammer@gmail.com", "link": "", "img": "" },
-        { "name": "@serega_kostin", "link": "", "img": "" },
+        { "name": "@catogrammer",
+          "link": "https://t.me/catogrammer",
+          "img":  "telegram.svg" },
+        { "name": "@catogrammer", 
+          "link": "https://github.com/catogrammer",
+          "img":  "github.svg" },
+        { "name": "catogrammer@gmail.com", "link": "", "img": "gmail.svg" },
+        { "name": "@serega_kostin", "link": "", "img": "instagram.svg" },
     ]
 
 mixin social_net_card(src, name, link)
     .social-net-card
-        img.job_link(src=src alt="job link")
+        img.job_link(src=require(`images/${src}`) alt="social-net link")
         p.social_net_name= name
 
 .card.contacts
-    h3 Constacts
     .social-net-list
         each sn in sosial_net_list
             +social_net_card(sn.img, sn.name, sn.link)
