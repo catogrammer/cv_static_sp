@@ -13,9 +13,8 @@
     ]
 
 mixin social_net_card(src, name, link)
-    .social-net-card
-        .sn-img-container
-            img.sn_link(src=require(`images/${src}`) alt="social-net link")
+    .social-net-block
+        img.sn-img-container(src=require(`images/${src}`) alt="social-net link")
         p.social_net_name= name
 
 .card.contacts

@@ -65,15 +65,27 @@
     margin-top: 1em;
 }
 
+.social-net-block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5em;
+}
+
 .social-net-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.2em;
 }
 
 .sn-img-container {
     width: 1.5em;
 }
 
+.social_net_name {
+    background-color: #BCCEF8;
+    border-radius: 0.4em;
+}
 
 .job_title {
     display: flex;
