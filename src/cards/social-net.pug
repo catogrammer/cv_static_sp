@@ -8,13 +8,14 @@
         { "name": "@catogrammer", 
           "link": "https://github.com/catogrammer",
           "img":  "github.svg" },
-        { "name": "catogrammer@gmail.com", "link": "", "img": "gmail.svg" },
+        { "name": "catogrammer@gmail.com", "link": "", "img": "email.svg" },
         { "name": "@serega_kostin", "link": "", "img": "instagram.svg" },
     ]
 
 mixin social_net_card(src, name, link)
     .social-net-card
-        img.job_link(src=require(`images/${src}`) alt="social-net link")
+        .sn-img-container
+            img.sn_link(src=require(`images/${src}`) alt="social-net link")
         p.social_net_name= name
 
 .card.contacts

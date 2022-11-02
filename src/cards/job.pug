@@ -1,15 +1,33 @@
 
+- 
+    const oktet = "I was expand and develop of tests for several parts       \
+                   the network softeware whitch based on small linux distro. \
+                   Also fixed or improve already used parts."
+
 -
-    const job_list = [
-        { "title": "OktetLabs", "desc": "Work descri", "link": "", "src": "" },
-        { "title": "Konfident", "desc": "Work descri", "link": "", "src": "" },
-        { "title": "Graebert",  "desc": "I'm working in cloud CAD project.", "link": "", "src": "" }
+    const konfi = "I developed information security system for linux.  \
+                   We are devide solid system to microservices based   \
+                   self developed message bus. Also I redisign several \
+                   miscroservices, improve performance audit system, create \
+                   new database module and so on. Also develop new non blocking \
+                   client side interface on Qt widgets."
+
+- var grbrt = "I working on cloud CAD projects."
+                   
+-
+    const job_list = [        
+        { "title": "OktetLabs", "desc": oktet, "link": "http://oktetlabs.com" },
+        { "title": "Konfident", "desc": konfi, "link": "https://dallaslock.ru" },
+        { "title": "Graebert",  "desc": grbrt, "link": "https://www.graebert.com" }
     ]
 
 mixin job_card(title, desc, link, src)
     .job-description
-        p.job_title= title
-        img.job_link(src=src alt="job link")
+        .job_title
+            p.job_title= title
+            img.job_link(src=require(`images/link.svg`) alt="job link")
+            p= link
+
         p.job_description= desc
 
 .card.expirience
