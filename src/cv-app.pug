@@ -5,22 +5,24 @@ html
         link(rel="stylesheet" href="main.style.css")
 
     body.cv_container
-        .card-block
-            h1.card-titile Kostin Sergey
-            include cards/about
+        .column
+            .card-block
+                h1.card-titile Kostin Sergey
+                include cards/about
 
-        include cards/photo
+            .card-block
+                h2.card-titile Work expirience
+                include cards/job
+            
+            .card-block
+                h2.card-titile Contacts
+                include cards/social-net
 
-        .card-block
-            h2.card-titile Work expirience
-            include cards/job
-
-        .card-block
-            h2.card-titile Skills
-            include cards/skills
-        
-        .card-block
-            h2.card-titile Contacts
-            include cards/social-net
+        .column
+            include cards/photo
+            
+            .card-block
+                h2.card-titile Skills
+                include cards/skills
 
         script(src=`${htmlWebpackPlugin.files.main}`)
