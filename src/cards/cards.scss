@@ -30,6 +30,7 @@
 .skill-list {
     display: flex;
     flex-direction: column;
+    row-gap: 1em;
 }
 
 .skill-row {
@@ -37,14 +38,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 0.5em;
+    row-gap: 0.3em;
+
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.skill-row p {
+    margin: 0;
 }
 
 .skill-card {
     background-color: #BCCEF8;
-    max-height: 2.2em;
     border-radius: 1.1em;
     padding-left: 0.8em;
     padding-right: 0.8em;
+    margin: 0;
+    text-align: center;
+    align-self: center;
 }
 
 .profile {

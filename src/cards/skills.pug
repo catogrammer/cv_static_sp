@@ -4,12 +4,11 @@
         "Major" : ["C++/C", "Golang", "UNIX API"],
         "Minor" : ["Js/Ts", "bash/sh"],
         "Other" : ["CMake", "Docker", "CrossBuild"],
-        "Frameworks in use" : ["Qt", "Wt", "ODA aliance", "Eigen", "OpenCV", "ReactJS"]
+        "Frameworks in use" : ["Qt", "Wt", "ODA", "Eigen", "OpenCV", "ReactJS"]
     }
 
 mixin skill_card(name)
-    .skill-card
-        p= name
+    p.skill-card= name
 
 .card.skills
     .skill-list

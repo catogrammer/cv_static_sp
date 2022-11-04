@@ -18,7 +18,8 @@ module.exports = {
 
     resolve: {
         alias: {
-            images: path.resolve(__dirname, "./src/imgs")
+            images: path.resolve(__dirname, "./src/imgs"),
+            fonts: path.resolve(__dirname, "./src/fonts")
         },
     },
 
@@ -44,6 +45,17 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.(ttf)$/,
+                use : [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                        }
+                    }
+                ]
+            }
 
         ]
     },

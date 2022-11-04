@@ -10,12 +10,17 @@ body {
     height: 700px;
 
     background-color: #FAF7F0;
+    font-family: Verdana;
 }
 
 body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
 
+@font-face {
+    font-family: Verdana;
+    src: url(fonts/Verdana.ttf);
+}
 
 .cv_container {
     margin: 0 auto;
