@@ -18,8 +18,9 @@ module.exports = {
 
     resolve: {
         alias: {
-            images: path.resolve(__dirname, "./src/imgs"),
-            fonts: path.resolve(__dirname, "./src/fonts")
+            images:  path.resolve(__dirname, "./src/imgs"),
+            fonts:   path.resolve(__dirname, "./src/fonts"),
+            favicon: path.resolve(__dirname, "./src/favicon")
         },
     },
 
@@ -34,7 +35,7 @@ module.exports = {
                 use: [ "pug-loader", ],
             },
             {
-                test: /\.(jp(e)?g|png|svg)$/i,
+                test: /\.(jp(e)?g|png|svg|ico)$/i,
                 use : [
                     {
                         loader: 'file-loader',

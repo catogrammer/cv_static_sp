@@ -25,8 +25,8 @@ mixin job_card(title, desc, link, v_link)
     .job-description
         .job_title
             h4.job_title= title
-            img.job_link_img(src=require(`images/link.svg`) alt="job link")
-            a.job_link(href=link)&attributes(attributes)= v_link
+            a.job_link(href=link)
+                img.job_link_img(src=require(`images/link.svg`) alt="job link")
 
         p.job_description= desc
 
