@@ -8,7 +8,8 @@ module.exports = {
     entry: './src/index.js',
 
     devServer: {
-        static: [path.join(__dirname, '..', 'build')]
+        static: [path.join(__dirname, '..', 'build')],
+        historyApiFallback: true
     },
 
     output: {
@@ -48,14 +49,8 @@ module.exports = {
             },
             {
                 test: /\.(ttf)$/,
-                use : [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        }
-                    }
-                ]
+                type: 'asset/resource',
+                dependency: { not: ['url'] },
             }
 
         ]
