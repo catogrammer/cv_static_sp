@@ -1,0 +1,23 @@
+.job_title {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+
+    line-height: 1.8em;
+    vertical-align: bottom;
+}
+
+.job_title p {
+    margin: 0;
+    // font-size: 20;
+}
+
+.job_link_img {
+    width: 0.8em;
+}
+.job_title a:-webkit-any-link  {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: bottom;
+}

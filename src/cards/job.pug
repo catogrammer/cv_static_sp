@@ -16,21 +16,21 @@
                    
 -
     const job_list = [        
-        { "title": "OktetLabs", "desc": oktet, "link": "http://oktetlabs.com" },
-        { "title": "Konfident", "desc": konfi, "link": "https://dallaslock.ru" },
-        { "title": "Graebert",  "desc": grbrt, "link": "https://www.graebert.com" }
+        { "title": "OktetLabs", "desc": oktet, "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
+        { "title": "Konfident", "desc": konfi, "link": "https://dallaslock.ru", "v_link":"dallaslock.ru" },
+        { "title": "Graebert",  "desc": grbrt, "link": "https://www.graebert.com", "v_link":"graebert.com" }
     ]
 
-mixin job_card(title, desc, link, src)
+mixin job_card(title, desc, link, v_link)
     .job-description
         .job_title
-            p.job_title= title
-            img.job_link(src=require(`images/link.svg`) alt="job link")
-            p= link
+            h4.job_title= title
+            img.job_link_img(src=require(`images/link.svg`) alt="job link")
+            a.job_link(href=link)&attributes(attributes)= v_link
 
         p.job_description= desc
 
 .card.expirience
     .job-list
         each j in job_list
-            +job_card(j.title, j.desc, j.link, src)
+            +job_card(j.title, j.desc, j.link, j.v_link)

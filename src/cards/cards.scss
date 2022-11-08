@@ -1,5 +1,7 @@
 @import '../variables';
-
+@import 'contacts';
+@import 'job';
+@import 'skills';
 
 .card {
     background-color: $card-base-color;
@@ -13,49 +15,6 @@
     border-radius: 1.5em;
     text-align: center;
     margin: auto;
-}
-
-.about {
-    
-}
-
-.expirience {
-
-}
-
-.skills {
-
-}
-
-.skill-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
-}
-
-.skill-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    row-gap: 0.3em;
-
-    line-height: 2em;
-    vertical-align: middle;
-}
-
-.skill-row p {
-    margin: 0;
-}
-
-.skill-card {
-    background-color: #BCCEF8;
-    border-radius: 1.1em;
-    padding-left: 0.8em;
-    padding-right: 0.8em;
-    margin: 0;
-    text-align: center;
-    align-self: center;
 }
 
 .profile {
@@ -76,34 +35,5 @@
     margin-top: 1em;
 }
 
-.social-net-block {
-    display: flex;
-    flex-direction: row;
-    column-gap: 0.5em;
-}
 
-.social-net-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 1.2em;
-}
 
-.sn-img-container {
-    width: 1.5em;
-}
-
-.social_net_name {
-    background-color: #BCCEF8;
-    border-radius: 0.4em;
-}
-
-.job_title {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1em;
-}
-
-.job_link {
-    width: 0.7em;
-}
