@@ -3,11 +3,11 @@
     flex-direction: row;
     column-gap: 1em;
 
-    line-height: 1.8em;
+    line-height: 2.2em;
     vertical-align: bottom;
 }
 
-.job_title p {
+.job_title p, h4 {
     margin: 0;
     // font-size: 20;
 }
