@@ -14,7 +14,7 @@ mixin skill_card(name)
     .skill-list
         each value, key in skill_list
             .skill-row
-                p= key
+                p.skill-name= key
                 each sk in value
                     +skill_card(sk)
 
