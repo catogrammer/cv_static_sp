@@ -1,0 +1,11 @@
+
+.languages {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1em;
+}
+
+.languages p {
+    margin: 0;
+}
