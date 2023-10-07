@@ -2,8 +2,6 @@
 @import 'cards/cards';
 
 body {
-    margin: 0;
-	padding: 0;
 	border: 0;
 
     width: 900px;
@@ -11,6 +9,17 @@ body {
 
     background-color: #FAF7F0;
     font-family: Verdana;
+}
+
+body.dark {
+	border: 0;
+
+    width: 900px;
+    // height: 700px;
+    font-family: Verdana;
+
+    color: #FAF7F0;
+    background-color: $background-color-dark;
 }
 
 body::-webkit-scrollbar {
@@ -22,20 +31,19 @@ body::-webkit-scrollbar {
     src: url(fonts/Verdana.ttf);
 }
 
-.cv_container {
+.cv-container {
     margin: 0 auto;
     padding: 2em;
+}
+
+.cv-grid-containter {
     display: grid;
     grid-template-columns: 8fr 4fr;
     column-gap: 1.5em;
 }
 
-.cv_container .column {
+.cv-grid-containter .column {
     display: flex;
     flex-direction: column;
     row-gap: 2em;
 }
-
-// .card-block {
-   
-// }

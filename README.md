@@ -1,5 +1,7 @@
 pug -w . -o .\build\html\ -P
 
+npm run build
+
 TODO: divide webpack on prodaction and dev
 TODO: create deploy container or script
 TODO: fix css names and web-site name

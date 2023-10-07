@@ -3,31 +3,34 @@ doctype html
 html(lang='en')
     head
         link(rel="stylesheet" href="main.style.css")
-        link(rel="icon" type="image/x-icon" href=require(`favicon/favicon.ico`))
+        link(rel="icon" type="image/x-icon" href=`favicon/favicon.ico`)
 
-    body.cv_container
-        .column
-            .card-block
-                h1.card-titile.name Kostin Sergey
-                include cards/about
+    body.cv-container
+        include theme-button
+        
+        .cv-grid-containter
+            .column
+                .card-block
+                    h1.card-titile.name Kostin Sergey
+                    include cards/about
 
-            .card-block
-                h2.card-titile Work expirience
-                include cards/job
-            
-            .card-block
-                h2.card-titile Contacts
-                include cards/social-net
+                .card-block
+                    h2.card-titile Work expirience
+                    include cards/job
+                
+                .card-block
+                    h2.card-titile Contacts
+                    include cards/social-net
 
-        .column
-            include cards/photo
-            
-            .card-block
-                h2.card-titile Skills
-                include cards/skills
+            .column
+                include cards/photo
+                
+                .card-block
+                    h2.card-titile Skills
+                    include cards/skills
 
-            .card-block
-                h2.card-titile Languages
-                include cards/languages
+                .card-block
+                    h2.card-titile Languages
+                    include cards/languages
 
-        script(src=`${htmlWebpackPlugin.files.main}`)
+        script(src=`${htmlWebpackPlugin.files.js[0]}`)

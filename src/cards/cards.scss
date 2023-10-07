@@ -10,6 +10,12 @@
     padding: $card-base-padding;
 }
 
+.card.dark {
+    background-color: $card-base-color-dark;
+    border-radius: $card-base-brdr-radius;
+    padding: $card-base-padding;
+}
+
 .card-titile {
     // background-color: #BCCEF8;
     height: 2em;
@@ -27,14 +33,18 @@
     background-color: #FAF7F0;
 }
 
-.img_contrainer {
+.profile.dark {
+    background-color: $background-color-dark;
+}
+
+.img-contrainer {
     width: 20em;
     height: 20em;
     background-color:  $card-base-color;
     border-radius: 10em;
 }
 
-.profile_img {
+.profile-img {
     width: 18em;
     border-radius: 9em;
     margin-left: 1em;
