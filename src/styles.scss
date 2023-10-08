@@ -1,24 +1,21 @@
 @import 'variables';
 @import 'cards/cards';
+@import 'theme-button';
 
 body {
 	border: 0;
-
     width: 900px;
-    // height: 700px;
-
-    background-color: #FAF7F0;
+    background-color: $background-color-light;
     font-family: Verdana;
 }
 
+body.light {
+    color: $text-color-light;
+    background-color: $background-color-light;
+}
+
 body.dark {
-	border: 0;
-
-    width: 900px;
-    // height: 700px;
-    font-family: Verdana;
-
-    color: #FAF7F0;
+    color: $text-color-dark;
     background-color: $background-color-dark;
 }
 
@@ -46,4 +43,16 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     row-gap: 2em;
+}
+
+.substrate {
+    background-color: $highlight-box-color-light;
+    border-radius: 1.1em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    margin: 0;
+}
+
+.substrate.dark {
+    background-color: $highlight-box-color-dark;
 }

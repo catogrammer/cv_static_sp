@@ -5,7 +5,7 @@
 @import 'languages';
 
 .card {
-    background-color: $card-base-color;
+    background-color: $card-base-color-light;
     border-radius: $card-base-brdr-radius;
     padding: $card-base-padding;
 }
@@ -17,7 +17,6 @@
 }
 
 .card-titile {
-    // background-color: #BCCEF8;
     height: 2em;
     border-radius: 1.5em;
     margin: auto;
@@ -30,7 +29,7 @@
 }
 
 .profile {
-    background-color: #FAF7F0;
+    background-color: $background-color-light;
 }
 
 .profile.dark {
@@ -40,7 +39,7 @@
 .img-contrainer {
     width: 20em;
     height: 20em;
-    background-color:  $card-base-color;
+    background-color:  $card-base-color-light;
     border-radius: 10em;
 }
 

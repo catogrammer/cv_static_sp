@@ -7,8 +7,8 @@
         "Frameworks in use" : ["Qt", "Wt", "ODA", "Eigen", "OpenCV", "ReactJS"]
     }
 
-mixin skill_card(name)
-    p.skill-card= name
+mixin skill_box(name)
+    p.substrate.skill-box= name
 
 .card.skills
     .skill-list
@@ -16,6 +16,6 @@ mixin skill_card(name)
             .skill-row
                 p.skill-name= key
                 each sk in value
-                    +skill_card(sk)
+                    +skill_box(sk)
 
 

@@ -12,23 +12,38 @@ window.onafterprint = function() {
 const themeSwitcher = document.getElementById('theme-switcher');
 const body = document.body;
 const cards = document.querySelectorAll('[class^="card "]');
+const highlightSubstrate = document.querySelectorAll('[class^="substrate "]');
 
-themeSwitcher.addEventListener('click', () => {
-    if ( body.classList.contains('light') ) {
-        body.classList.remove('light');
-        body.classList.add('dark');
+function updateThemeClass(theme_class, old_theme_class) {
+    body.classList.remove(old_theme_class);
+    body.classList.add(theme_class);
 
-        cards.forEach(card => {
-            card.classList.remove('light');
-            card.classList.add('dark');
-        })
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
+    cards.forEach(card => {
+        card.classList.remove(old_theme_class);
+        card.classList.add(theme_class);
+    })
 
-        cards.forEach(card => {
-            card.classList.remove('dark');
-            card.classList.add('light');
-        })
-    }
-});
+    highlightSubstrate.forEach( sub => {
+        sub.classList.remove(old_theme_class);
+        sub.classList.add(theme_class);
+    })
+};
+
+function toggleTheme() {
+    const theme_class = body.classList.contains('dark') ? 'light' : 'dark';
+    const old_theme_class = !body.classList.contains('dark') ? 'light' : 'dark';
+
+    updateThemeClass(theme_class, old_theme_class);
+    localStorage.setItem('theme', theme_class);
+};
+
+
+// Check if a theme preference is stored in localStorage
+const storedTheme = localStorage.getItem('theme');
+if ( storedTheme === 'dark' ) {
+    updateThemeClass('dark', 'light')
+} else {
+    updateThemeClass('light', 'dark')
+}
+
+themeSwitcher.addEventListener('change', toggleTheme);

@@ -27,16 +27,15 @@
 
 .skill-name {
     border-style: solid;
-    border-color: #cdfcf6b2;
+    border-color: $border-color-light;
     border-radius: 1.1em;
 }
 
-.skill-card {
-    background-color: #BCCEF8;
-    border-radius: 1.1em;
-    padding-left: 0.8em;
-    padding-right: 0.8em;
-    margin: 0;
+.skill-box {
     text-align: center;
     align-self: center;
+}
+
+.skill-box.dark {
+    background-color: $skill-box-color-dark;
 }
