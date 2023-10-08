@@ -13,6 +13,7 @@ const themeSwitcher = document.getElementById('theme-switcher');
 const body = document.body;
 const cards = document.querySelectorAll('[class^="card "]');
 const highlightSubstrate = document.querySelectorAll('[class^="substrate "]');
+const svgJobLinks = document.querySelectorAll('[class^="job_link_img "]');
 
 function updateThemeClass(theme_class, old_theme_class) {
     body.classList.remove(old_theme_class);
@@ -26,6 +27,11 @@ function updateThemeClass(theme_class, old_theme_class) {
     highlightSubstrate.forEach( sub => {
         sub.classList.remove(old_theme_class);
         sub.classList.add(theme_class);
+    })
+
+    svgJobLinks.forEach( img => {
+        img.classList.remove(old_theme_class);
+        img.classList.add(theme_class);
     })
 };
 
@@ -41,8 +47,10 @@ function toggleTheme() {
 // Check if a theme preference is stored in localStorage
 const storedTheme = localStorage.getItem('theme');
 if ( storedTheme === 'dark' ) {
+    themeSwitcher.checked = false;
     updateThemeClass('dark', 'light')
 } else {
+    themeSwitcher.checked = true;
     updateThemeClass('light', 'dark')
 }
 
