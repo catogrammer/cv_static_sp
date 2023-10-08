@@ -12,8 +12,6 @@
 
 .card.dark {
     background-color: $card-base-color-dark;
-    border-radius: $card-base-brdr-radius;
-    padding: $card-base-padding;
 }
 
 .card-titile {
@@ -41,6 +39,10 @@
     height: 20em;
     background-color:  $card-base-color-light;
     border-radius: 10em;
+}
+
+.img-contrainer.dark {
+    background-color:  $card-base-color-dark;
 }
 
 .profile-img {

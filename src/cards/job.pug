@@ -15,9 +15,14 @@
                    responsibilities. Additionally, I developed a new 
                    non-blocking client-side interface on Qt widgets.`
 
-    const grbrt = `Currently, I am working on cloud CAD projects, where 
+    const grbrt = `I'm currently working on cloud CAD projects, and 
                    my responsibilities include developing new features 
-                   and supporting old code.`
+                   and supporting existing code. I've been working on 
+                   a constraints project to enhance the functionality 
+                   of the web application. This involves upgrading sketch 
+                   commands to automatically create constraints and 
+                   implementing various related features. I handle both 
+                   the backend and client-side development.`
 
     const job_list = [        
         { "title": "OktetLabs", "desc": oktet, "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
@@ -27,12 +32,12 @@
 
 mixin job_card(title, desc, link, v_link)
     .job-description
-        .job_title
-            h4.substrate.job_title= title
-            a.job_link(href=link)
-                img.job_link_img(src=require(`images/link.svg`) alt="job link")
+        .job-title
+            h4.substrate.job-title= title
+            a.job-link(href=link)
+                img.job-link-img(src=require(`images/link.svg`) alt="job link")
 
-        p.job_description= desc
+        p.job-description= desc
 
 .card.expirience
     .job-list

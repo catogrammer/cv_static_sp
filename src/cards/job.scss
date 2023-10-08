@@ -1,4 +1,4 @@
-.job_title {
+.job-title {
     display: flex;
     flex-direction: row;
     column-gap: 1em;
@@ -8,13 +8,14 @@
 
 }
 
-.job_title p, h4 {
+.job-title p, h4 {
 }
 
-.job_link_img {
+.job-link-img {
     width: 0.8em;
 }
-.job_title a:-webkit-any-link  {
+
+.job-title a:-webkit-any-link  {
     text-decoration: none;
     color: black;
     text-align: center;
