@@ -37,7 +37,7 @@ mixin job_card(title, desc, link, v_link)
             a.job-link(href=link)
                 img.job-link-img(src=require(`images/link.svg`) alt="job link")
 
-        p.job-description= desc
+        p.indented-paragraph.job-description= desc
 
 .card.expirience
     .job-list
