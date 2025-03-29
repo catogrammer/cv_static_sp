@@ -2,35 +2,48 @@ doctype html
 
 html(lang='en')
     head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(charset="UTF-8")
+        meta(name="robots" content="index, follow")
+        meta(name="description" content="Sergey Kostin CV. I'm experienced C++ developer.")
+
+        link(rel="canonical" href="https://catogrammer.com")
         link(rel="stylesheet" href="main.style.css")
         link(rel="icon" type="image/x-icon" href=`favicon/favicon.ico`)
+
+        //- Open Graph (For Social Media)
+        meta(property="og:title" content="Sergey Kostin Resume")
+        meta(property="og:description" content="A short description for social media.")
+        meta(property="og:image" content="https://catogrammer.com/profile_pic.jpg")
+        meta(property="og:url" content="https://catogrammer.com")
+        meta(property="og:type" content="website")
+
 
     body.cv-container.light
         include theme-button
         
         .cv-grid-containter
-            .column
-                .card-block
-                    h1.card-titile.name Kostin Sergey
-                    include cards/about
+            .card-block.item1
+                h1.card-titile.name Kostin Sergey
+                include cards/about
 
-                .card-block
-                    h2.card-titile Work expirience
-                    include cards/job
-                
-                .card-block
-                    h2.card-titile Contacts
-                    include cards/social-net
+            .card-block.item2
+                h2.card-titile Work expirience
+                include cards/job
+            
+            .card-block.item3
+                h2.card-titile Contacts
+                include cards/social-net
 
-            .column
+            .card-block.item4
                 include cards/photo
-                
-                .card-block
-                    h2.card-titile Skills
-                    include cards/skills
 
-                .card-block
-                    h2.card-titile Languages
-                    include cards/languages
+            .card-block.item5
+                h2.card-titile Skills
+                include cards/skills
+
+            .card-block.item6
+                h2.card-titile Languages
+                include cards/languages
 
         script(src=`${htmlWebpackPlugin.files.js[0]}`)

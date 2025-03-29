@@ -36,13 +36,39 @@ body::-webkit-scrollbar {
 .cv-grid-containter {
     display: grid;
     grid-template-columns: 8fr 4fr;
+    grid-auto-flow: row dense;
     column-gap: 1.5em;
+    row-gap: 2em;
 }
 
-.cv-grid-containter .column {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2em;
+// .cv-grid-containter .column {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 2em;
+// }
+
+/* Assign elements to the correct column */
+.item1, .item2, .item3 { grid-column: 1; } /* Main content */
+.item4, .item5, .item6 { grid-column: 2; } /* Sidebar */
+
+@media (max-width: 1250px) {
+    .cv-grid-containter {
+        grid-template-columns: 1fr;
+        column-gap: 1em;
+    }
+
+    .item1, .item2, .item3, .item4, .item5, .item6 {
+        grid-column: auto;
+    }
+
+    /* Reorder for a better reading experience */
+    .item4 { order: -1; } /* Move Photo to the top */
+    .item3 { order: 6; }
+
+    .profile {
+        display: grid;
+        place-items: center;
+    }
 }
 
 .substrate {
