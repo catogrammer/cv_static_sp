@@ -1,45 +1,47 @@
 
 -
-    const oktet = `In my previous role at OktetLabs, I worked on expanding 
-                   and developing tests for several parts of the network 
-                   software which was based on a small Linux distro. 
-                   I also fixed and improved existing code, gaining 
-                   valuable experience with Linux sockets and traffic 
-                   exploration using tools like Wireshark.`
-
-    const konfi = `I developed an information security system for Linux, 
-                   where we divided the solid system into microservices 
-                   based on our self-developed message bus. I redesigned 
-                   several microservices, improved performance of the audit 
-                   system, and created a new database module, among other 
-                   responsibilities. Additionally, I developed a new 
-                   non-blocking client-side interface on Qt widgets.`
-
-    const grbrt = `I'm currently working on cloud CAD projects, and 
-                   my responsibilities include developing new features 
-                   and supporting existing code. I've been working on 
-                   a constraints project to enhance the functionality 
-                   of the web application. This involves upgrading sketch 
-                   commands to automatically create constraints and 
-                   implementing various related features. I handle both 
-                   the backend and client-side development.`
-
-    const job_list = [        
-        { "title": "OktetLabs", "desc": oktet, "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
-        { "title": "Konfident", "desc": konfi, "link": "https://dallaslock.ru", "v_link":"dallaslock.ru" },
-        { "title": "Graebert",  "desc": grbrt, "link": "https://www.graebert.com", "v_link":"graebert.com" }
+    const onshape = [
+        "Develop new features and maintain existing code for Onshape’s drawings editor, a cloud-based CAD project.",
+        "Lead development on the constraints project, enhancing sketching functionality while ensuring minimal disruption to existing features.",
+        "Solve complex technical challenges, improving sketch constraint commands and implementing related functionalities.",
+        "Work within strict requirements and limitations, ensuring efficient integration with the existing system.",
+        "Contribute to both backend and client-side development, ensuring a seamless user experience."
     ]
 
-mixin job_card(title, desc, link, v_link)
+    const konfident = [
+        "Developed an information security system for Linux distributions, transitioning from a monolithic structure to a microservices-based architecture.",
+        "Designed and implemented a high-performance message bus using ZeroMQ, optimizing inter-service communication.",
+        "Refactored and redesigned multiple microservices, leading to improved system performance and scalability.",
+        "Developed a new database module, enhancing data retrieval and storage efficiency.",
+        "Overhauled the client-side application, replacing the old blocking implementation with a non-blocking, asynchronous Qt-based UI."
+    ]
+
+    const oktet = [
+        "Expanded and improved test suites for network software running on a lightweight Linux distribution.",
+        "Fixed and optimized existing code, gaining deep experience with Linux sockets and traffic analysis tools (Wireshark).",
+        "Improved networking components, increasing stability and performance."
+    ]
+
+    const job_list = [
+        { "title": "OktetLabs (IoT)", "desc":  oktet, "duration": "1 year", "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
+        { "title": "Konfident  (Information Security System)", "desc": konfident, "duration": "1 year", "link": "https://dallaslock.ru", "v_link":"dallaslock.ru" },
+        { "title": "Graebert (Cloud CAD)",  "desc": onshape, "duration": "3.5 years", "link": "https://www.graebert.com", "v_link":"graebert.com" }
+    ]
+
+mixin job_card(title, desc, duration, link, v_link)
     .job-description
         .job-title
-            h4.substrate.job-title= title
+            h4.substrate= title
+            h6.substrate.border-styled= duration
             a.job-link(href=link)
                 img.job-link-img(src=require(`images/link.svg`) alt="job link")
+        ul.job-description.custom-list
+            each val in desc
+                li= val
 
-        p.indented-paragraph.job-description= desc
+        //- pD= desc
 
 .card.expirience
     .job-list
         each j in job_list
-            +job_card(j.title, j.desc, j.link, j.v_link)
+            +job_card(j.title, j.desc, j.duration, j.link, j.v_link)

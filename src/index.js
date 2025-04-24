@@ -12,7 +12,7 @@ window.onafterprint = function() {
 const themeSwitcher = document.getElementById('theme-switcher');
 const body = document.body;
 const cards = document.querySelectorAll('[class^="card "]');
-const highlightSubstrate = document.querySelectorAll('[class^="substrate "]');
+const highlightSubstrate = document.querySelectorAll('[class^="substrate"]');
 const imgSub = document.querySelectorAll('[class^="img-contrainer "]');
 
 function updateThemeClass(theme_class, old_theme_class) {
