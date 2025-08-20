@@ -30,20 +30,19 @@ html(lang='en')
             .card-block.item2
                 h2.card-titile Work expirience
                 include cards/job
-            
-            .card-block.item3
-                h2.card-titile Contacts
-                include cards/social-net
 
             .card-block.item4
                 include cards/photo
 
-            .card-block.item5
-                h2.card-titile Skills
-                include cards/skills
-
-            .card-block.item6
-                h2.card-titile Languages
-                include cards/languages
+            .item5
+                .card-block
+                    h2.card-titile Skills
+                    include cards/skills
+                .card-block
+                    h2.card-titile Languages
+                    include cards/languages
+                .card-block
+                    h2.card-titile Contacts
+                    include cards/social-net
 
         script(src=`${htmlWebpackPlugin.files.js[0]}`)
