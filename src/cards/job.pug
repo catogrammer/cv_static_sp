@@ -23,16 +23,16 @@
     ]
 
     const job_list = [
-        { "title": "OktetLabs (IoT)", "desc":  oktet, "duration": "1 year", "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
-        { "title": "Konfident  (Information Security System)", "desc": konfident, "duration": "1 year", "link": "https://dallaslock.ru", "v_link":"dallaslock.ru" },
-        { "title": "Graebert (Onshape Cloud CAD)",  "desc": onshape, "duration": "4 years", "link": "https://www.graebert.com", "v_link":"graebert.com" }
+        { "title": "OktetLabs (IoT)", "desc":  oktet, "duration": "Jul 2019 - Jan 2020", "link": "http://oktetlabs.com", "v_link":"oktetlabs.com" },
+        { "title": "Konfident  (Cyber Security)", "desc": konfident, "duration": "Sep 2020 - Aug 2021", "link": "https://dallaslock.ru", "v_link":"dallaslock.ru" },
+        { "title": "Graebert (Onshape Cloud CAD)",  "desc": onshape, "duration": "Sep 2021 - Present", "link": "https://www.graebert.com", "v_link":"graebert.com" }
     ]
 
 mixin job_card(title, desc, duration, link, v_link)
     .job-description
         .job-title
             h4.substrate= title
-            h6.substrate.border-styled= duration
+            h5.substrate.border-styled= duration
             a.job-link(href=link)
                 img.job-link-img(src=require(`images/link.svg`) alt="job link")
         ul.job-description.custom-list

@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     grid-template-columns: 8fr 4fr;
     grid-auto-flow: row dense;
     column-gap: 1.5em;
-    row-gap: 2em;
+    row-gap: 1.2em;
 }
 
 // .cv-grid-containter .column {
@@ -51,9 +51,11 @@ body::-webkit-scrollbar {
 .item1, .item2, .item3 { grid-column: 1; } /* Main content */
 .item4, .item5, .item6 { grid-column: 2; } /* Sidebar */
 
-.item5 {
+
+
+.item5, .item2 {
     display: grid;
-    row-gap: 1.5em;
+    row-gap: 1em;
 }
 
 @media (max-width: 1250px) {
